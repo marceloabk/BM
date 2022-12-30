@@ -1,0 +1,12 @@
+body {
+  font-family: "Roboto Slab", serif;
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}

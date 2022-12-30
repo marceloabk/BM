@@ -1,0 +1,31 @@
+{
+  "source": ["tokens/tokens.json"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "./src/style-dictionary-dist/",
+      "prefix": "token",
+      "files": [{
+        "destination": "variables.scss",
+        "format": "scss/variables"
+      }]
+    },
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "./src/style-dictionary-dist/",
+      "prefix": "token",
+      "files": [{
+        "destination": "variables.css",
+        "format": "css/variables"
+      }]
+    },
+    "js": {
+      "transformGroup": "js",
+      "buildPath": "./src/style-dictionary-dist/",
+      "files": [{
+        "destination": "variables.js",
+        "format": "javascript/es6"
+      }]
+    }
+  }
+}
