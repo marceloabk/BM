@@ -5,7 +5,7 @@ import ErrorPage from "./error-page";
 import "./index.css";
 
 import Root from "./routes/root";
-import Index from "./routes/index";
+import Index, { loader as indexLoader } from "./routes/index";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +15,13 @@ const router = createBrowserRouter([
     children: [
       {
         errorElement: <ErrorPage />,
-        children: [{ index: true, element: <Index /> }],
+        children: [
+          {
+            index: true,
+            element: <Index />,
+            loader: indexLoader,
+          },
+        ],
       },
     ],
   },

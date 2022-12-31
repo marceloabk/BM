@@ -9,6 +9,7 @@ import { Outlet } from "react-router-dom";
 const Wrapper = styled.div`
   display: flex;
   height: 100%;
+  width: 100vw;
 
   @media (max-width: 500px) {
     flex-direction: column;
@@ -27,7 +28,6 @@ const Main = styled.main`
   overflow-y: auto;
   padding-top: calc(100vh * 0.2 / 2);
   padding-left: 64px;
-  min-width: 850px;
 `;
 
 const WrapperInner = styled.div`
@@ -35,7 +35,7 @@ const WrapperInner = styled.div`
   margin-top: 64px;
 `;
 
-export default function Index() {
+export default function Root() {
   return (
     <Theme>
       <Wrapper>

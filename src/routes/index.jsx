@@ -1,12 +1,30 @@
+import { useLoaderData } from "react-router-dom";
+import { ArticleCall } from "../components/articleCall";
+import articlesCalls from "../mocks/articlesCalls";
+
+export async function loader() {
+  const articles = articlesCalls;
+  return { articles };
+}
 export default function Index() {
+  const { articles } = useLoaderData();
   return (
-    <>
-      <p id="zero-state">
-        This is a demo for React Router.
-        <br />
-        Check out{" "}
-        <a href="https://reactrouter.com">the docs at reactrouter.com</a>.
-      </p>
-    </>
+    <div>
+      {articles.length ? (
+        articles.map((article, i) => (
+          <ArticleCall
+            key={i}
+            title={article.title}
+            author={article.author}
+            date={article.date}
+            call={article.call}
+          />
+        ))
+      ) : (
+        <p>
+          <i>No contacts</i>
+        </p>
+      )}
+    </div>
   );
 }
