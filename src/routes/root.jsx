@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { LinkStyleless } from "../components/LinkStyleless";
+import { LinkStyleless } from "../components/linkStyleless";
 import { LinkLogo } from "../components/logo";
 import { NavList } from "../components/navList";
 import { VBar } from "../components/verticalBar";
-import Theme from "../components/Theme";
+import Theme from "../components/theme";
 import { Outlet } from "react-router-dom";
 
 const Wrapper = styled.div`

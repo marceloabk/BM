@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { useRouteError } from "react-router-dom";
 import { H1, H4 } from "./components/text";
-import Theme from "./components/Theme";
+import Theme from "./components/theme";
 
 const Wrapper = styled.div`
   display: flex;
