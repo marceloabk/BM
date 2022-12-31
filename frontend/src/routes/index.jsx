@@ -22,7 +22,7 @@ export default function Index() {
         ))
       ) : (
         <p>
-          <i>No contacts</i>
+          <i>Nenhum artigo publicado</i>
         </p>
       )}
     </div>
