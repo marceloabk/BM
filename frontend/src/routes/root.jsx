@@ -1,27 +1,18 @@
 import styled from "styled-components";
-import { LinkStyleless } from "../components/linkStyleless";
 import { LinkLogo } from "../components/logo";
-import { NavList } from "../components/navList";
-import { VBar } from "../components/verticalBar";
 import Theme from "../components/theme";
 import { Outlet } from "react-router-dom";
+import Navbar from "../components/Nav/Navbar";
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100vw;
 
-  @media (max-width: 500px) {
-    flex-direction: column;
+  @media ${({ theme }) => theme.devices.tablet} {
+    flex-direction: row;
   }
-`;
-
-const Nav = styled.nav`
-  flex: 1 0 25%;
-  height: 100vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 `;
 
 const Main = styled.main`
@@ -39,21 +30,7 @@ export default function Root() {
   return (
     <Theme>
       <Wrapper>
-        <Nav>
-          <NavList>
-            <li>
-              <LinkStyleless>Home</LinkStyleless>
-            </li>
-            <li>
-              <LinkStyleless>Portfólio</LinkStyleless>
-            </li>
-            <li>
-              <LinkStyleless>Currículo</LinkStyleless>
-            </li>
-          </NavList>
-          <VBar />
-        </Nav>
-
+        <Navbar />
         <Main>
           <LinkLogo />
           <WrapperInner>

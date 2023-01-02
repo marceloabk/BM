@@ -1,12 +1,12 @@
 import { ThemeProvider } from "styled-components";
 import colors from "./styles/colors";
 import sizes from "./styles/sizes";
-import breakpoints from "./styles/breakpoints";
+import devices from "./styles/breakpoints";
 import fonts from "./styles/fonts";
 
 const theme = {
   colors,
-  breakpoints,
+  devices,
   sizes,
   fonts,
 };

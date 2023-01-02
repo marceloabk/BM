@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { LinkStyleless } from "./linkStyleless";
+import { LinkStyleless } from "./LinkStyleless";
 
 const Logo = styled.p`
   font-family: ${({ theme }) => theme.fonts.Heading1Regular.fontFamily};
