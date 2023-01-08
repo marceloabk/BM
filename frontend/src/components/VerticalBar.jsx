@@ -8,7 +8,7 @@ const VerticalBar = styled.span`
   margin-left: ${({ theme }) => theme.sizes.Size8};
   display: none;
 
-  @media ${({ theme }) => theme.devices.tablet} {
+  @media ${({ theme }) => theme.devices.laptop} {
     flex-direction: row;
     display: block;
   }

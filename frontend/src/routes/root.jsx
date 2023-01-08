@@ -19,11 +19,17 @@ const Main = styled.main`
   overflow-y: auto;
   padding-top: calc(100vh * 0.2 / 2);
   padding-left: 64px;
+  flex-basis: 100%;
+
+  @media ${({ theme }) => theme.devices.laptop} {
+    flex-basis: 80%;
+  }
 `;
 
 const WrapperInner = styled.div`
-  width: 60%;
   margin-top: 64px;
+  width: 90%;
+  max-width: 800px;
 `;
 
 export default function Root() {

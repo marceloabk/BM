@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { ArticleCall } from "../components/articleCall";
+import { ArticleCall } from "../components/ArticleCall";
 import articlesCalls from "../mocks/articlesCalls";
 
 export async function loader() {

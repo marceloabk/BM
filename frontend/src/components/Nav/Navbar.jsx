@@ -8,8 +8,9 @@ const Nav = styled.nav`
   display: flex;
   justify-content: flex-end;
 
-  @media ${({ theme }) => theme.devices.tablet} {
-    flex: 1 0 25%;
+  @media ${({ theme }) => theme.devices.laptop} {
+    flex-basis: 20%;
+    min-width: 260px;
     height: 100vh;
     display: flex;
     justify-content: flex-end;
@@ -44,6 +45,10 @@ const NavList = styled.ul`
   transition: transform 0.3s ease-in-out;
 
   @media ${({ theme }) => theme.devices.tablet} {
+    width: calc(100vw * 0.4);
+  }
+
+  @media ${({ theme }) => theme.devices.laptop} {
     top: unset;
     right: unset;
     position: unset;

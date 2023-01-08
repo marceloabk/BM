@@ -33,7 +33,7 @@ const StyledBurguer = styled.div`
     }
   }
 
-  @media ${({ theme }) => theme.devices.tablet} {
+  @media ${({ theme }) => theme.devices.laptop} {
     display: none;
   }
 `;

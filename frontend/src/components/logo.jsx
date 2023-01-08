@@ -4,10 +4,21 @@ import { LinkStyleless } from "./LinkStyleless";
 const Logo = styled.p`
   font-family: ${({ theme }) => theme.fonts.Heading1Regular.fontFamily};
   font-weight: ${({ theme }) => theme.fonts.Heading1Regular.fontWeight};
-  font-size: ${({ theme }) => theme.fonts.Heading1Regular.fontSize};
+  font-size: 11vw;
   line-height: 70%;
-  margin: 0;
   display: inline;
+
+  @media ${({ theme }) => theme.devices.mobileM} {
+    font-size: 10vw;
+  }
+  
+  @media ${({ theme }) => theme.devices.laptop} {
+    font-size: 9vw;
+  }
+
+  @media ${({ theme }) => theme.devices.laptopL} {
+    font-size: ${({ theme }) => theme.fonts.Heading1Regular.fontSize};
+  }
 `;
 
 const LogoDarker = styled(Logo)`
