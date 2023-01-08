@@ -1,14 +1,23 @@
-import { H5 } from "./text";
+import styled from "styled-components";
+import { H5, P12, P } from "./text";
+
+const CallText = styled(P)`
+  margin-top: ${({ theme }) => theme.sizes.Size3};
+`
+const Container = styled.div`
+  margin-bottom: calc(${({ theme }) => theme.sizes.Size2} + ${({ theme }) => theme.sizes.Size9});
+`
+
 
 const ArticleCall = (props) => {
   return (
-    <div>
+    <Container>
       <H5>{props.title}</H5>
-      <p>
+      <P12>
         {props.author} {props.date}
-      </p>
-      <p>{props.call}</p>
-    </div>
+      </P12>
+      <CallText>{props.call}</CallText>
+    </Container>
   );
 };
 
