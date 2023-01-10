@@ -9,7 +9,7 @@ const Logo = styled.p`
   display: inline;
 
   @media ${({ theme }) => theme.devices.mobileM} {
-    font-size: 10vw;
+    font-size: 11vw;
   }
   
   @media ${({ theme }) => theme.devices.laptop} {

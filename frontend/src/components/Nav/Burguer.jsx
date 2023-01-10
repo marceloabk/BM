@@ -1,22 +1,21 @@
 import styled from "styled-components";
 
 const StyledBurguer = styled.div`
-  width: 2 rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   position: fixed;
-  top: 15px;
-  right: 20px;
+  top: 1.45rem;
+  right: 0.86rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-flow: column nowrap;
   z-index: 20;
 
   div {
-    width: 2rem;
-    height: 0.25rem;
-    background-color: ${({ open }) => (open ? "#ccc" : "#333")};
+    height: 0.18rem;
+    background-color: ${({ open }) => (open ? "#333" : "#ccc")};
     border-radius: 10px;
-    transform-origin: 1px;
+    transform-origin: 0.19rem;
     transition: all 0.3s linear;
 
     &:nth-child(1) {

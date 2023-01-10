@@ -17,19 +17,25 @@ const Wrapper = styled.div`
 
 const Main = styled.main`
   overflow-y: auto;
-  padding-top: calc(100vh * 0.2 / 2);
-  padding-left: 64px;
   flex-basis: 100%;
-
+  padding-top: ${({ theme }) => theme.sizes.Size7};
+  padding-left: ${({ theme }) => theme.sizes.Size7};
+  
   @media ${({ theme }) => theme.devices.laptop} {
     flex-basis: 80%;
+    padding-left: ${({ theme }) => theme.sizes.Size12};
+    padding-top: calc(100vh * 0.2 / 2);
   }
 `;
 
 const WrapperInner = styled.div`
-  margin-top: 64px;
+  margin-top: ${({ theme }) => theme.sizes.Size8};
   width: 90%;
   max-width: 800px;
+
+  @media ${({ theme }) => theme.devices.laptop} {
+    margin-top: ${({ theme }) => theme.sizes.Size12};
+  }
 `;
 
 export default function Root() {
