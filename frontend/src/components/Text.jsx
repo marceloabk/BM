@@ -68,5 +68,6 @@ const P12 = styled.p(XSmallLight);
 const P21 = styled.p(SmallLight);
 const P = styled.p(BaseLight);
 const P31 = styled.p(LargeLight);
+const Paragraph = styled.p(BaseLight);
 
-export { H1, H2, H3, H4, H5, H6, P11, P12, P21, P, P31 };
+export { H1, H2, H3, H4, H5, H6, P11, P12, P21, P, P31, Paragraph };

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 import { useRouteError } from "react-router-dom";
-import { H1, H4 } from "./components/text";
-import Theme from "./components/theme";
+import { H1, H4 } from "./components/Text";
+import Theme from "./components/Theme";
 
 const Wrapper = styled.div`
   display: flex;

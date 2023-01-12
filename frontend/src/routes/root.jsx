@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { LinkLogo } from "../components/logo";
-import Theme from "../components/theme";
+import { LinkLogo } from "../components/Logo";
+import Theme from "../components/Theme";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Nav/Navbar";
 
@@ -12,6 +12,8 @@ const Wrapper = styled.div`
 
   @media ${({ theme }) => theme.devices.tablet} {
     flex-direction: row;
+    padding-left: ${({ theme }) => theme.sizes.Size7};
+    padding-right: ${({ theme }) => theme.sizes.Size5};
   }
 `;
 
@@ -33,7 +35,7 @@ const WrapperInner = styled.div`
   width: 90%;
   max-width: 800px;
 
-  @media ${({ theme }) => theme.devices.laptop} {
+  @media ${({ theme }) => theme.devices.tablet} {
     margin-top: ${({ theme }) => theme.sizes.Size12};
   }
 `;
