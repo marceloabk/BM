@@ -31,8 +31,8 @@ const LogoLighter = styled(Logo)`
 
 const LinkLogo = () => (
   <LinkStyleless>
-    <LogoDarker>MARCELO</LogoDarker>
-    <LogoLighter>CRISTIANO</LogoLighter>
+    <LogoDarker>BLOG</LogoDarker>
+    <LogoLighter>MAKER</LogoLighter>
   </LinkStyleless>
 );
 
