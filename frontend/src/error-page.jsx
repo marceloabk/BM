@@ -10,8 +10,14 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  height: 100vh;
-  width: 100vw;
+  ${({article}) => {
+    if (!article) {
+      return (
+        `height: 100vh;
+         width: 100vw;`
+      )
+    }
+  }};
 `;
 
 const H4Styled = styled(H4)`
@@ -20,16 +26,16 @@ const H4Styled = styled(H4)`
   margin: 0;
 `;
 
-export default function ErrorPage() {
+export default function ErrorPage({article}) {
   const error = useRouteError();
   console.error(error);
 
   return (
     <Theme>
-      <Wrapper>
+      <Wrapper article={article}>
         <H1>404</H1>
         <H4Styled>
-          Essa página estava na nuvem, mas parece que está chovendo
+          Essa página estava na nuvem, mas parece que está chovendo!
         </H4Styled>
       </Wrapper>
     </Theme>
