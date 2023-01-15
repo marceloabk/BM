@@ -11,7 +11,7 @@ const Logo = styled.p`
   @media ${({ theme }) => theme.devices.mobileM} {
     font-size: 11vw;
   }
-  
+
   @media ${({ theme }) => theme.devices.laptop} {
     font-size: 9vw;
   }
@@ -30,7 +30,7 @@ const LogoLighter = styled(Logo)`
 `;
 
 const LinkLogo = () => (
-  <LinkStyleless>
+  <LinkStyleless to="/">
     <LogoDarker>BLOG</LogoDarker>
     <LogoLighter>MAKER</LogoLighter>
   </LinkStyleless>

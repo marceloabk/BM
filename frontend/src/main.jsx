@@ -6,6 +6,7 @@ import "./index.css";
 
 import Root from "./routes/root";
 import Index, { loader as indexLoader } from "./routes/index";
+import Article, { loader as articleLoader } from "./routes/article";
 
 const router = createBrowserRouter([
   {
@@ -14,12 +15,17 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        errorElement: <ErrorPage />,
+        errorElement: <ErrorPage article />,
         children: [
           {
             index: true,
             element: <Index />,
             loader: indexLoader,
+          },
+          {
+            element: <Article />,
+            path: "articles/:articleId",
+            loader: articleLoader,
           },
         ],
       },

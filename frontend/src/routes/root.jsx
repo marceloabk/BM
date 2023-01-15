@@ -22,7 +22,7 @@ const Main = styled.main`
   flex-basis: 100%;
   padding-top: ${({ theme }) => theme.sizes.Size7};
   padding-left: ${({ theme }) => theme.sizes.Size7};
-  
+
   @media ${({ theme }) => theme.devices.laptop} {
     flex-basis: 80%;
     padding-left: ${({ theme }) => theme.sizes.Size12};

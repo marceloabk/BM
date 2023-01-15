@@ -68,7 +68,7 @@ const Navbar = () => {
       <Burguer open={open} setOpen={setOpen} />
       <NavList open={open}>
         <li>
-          <LinkStyleless>Home</LinkStyleless>
+          <LinkStyleless to="/">Home</LinkStyleless>
         </li>
         <li>
           <LinkStyleless>Portfólio</LinkStyleless>

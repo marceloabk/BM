@@ -10,12 +10,10 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  ${({article}) => {
+  ${({ article }) => {
     if (!article) {
-      return (
-        `height: 100vh;
-         width: 100vw;`
-      )
+      return `height: 100vh;
+         width: 100vw;`;
     }
   }};
 `;
@@ -26,7 +24,7 @@ const H4Styled = styled(H4)`
   margin: 0;
 `;
 
-export default function ErrorPage({article}) {
+export default function ErrorPage({ article }) {
   const error = useRouteError();
   console.error(error);
 
