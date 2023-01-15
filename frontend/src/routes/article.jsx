@@ -1,6 +1,8 @@
+import Markdown from "markdown-to-jsx";
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getArticle } from "../article.js";
-import Markdown from "markdown-to-jsx";
+import { Code } from "../components/Code";
 
 export async function loader({ params }) {
   const contact = await getArticle(params.articleId);
@@ -16,10 +18,25 @@ export async function loader({ params }) {
 
 export default function Article() {
   const article = useLoaderData();
+  const [isDark, setIsDark] = useState(true);
 
   return (
     <article>
-      <Markdown>{article}</Markdown>
+      <Markdown
+        options={{
+          overrides: {
+            Code: {
+              component: Code,
+              props: {
+                isDark,
+                setIsDark,
+              },
+            },
+          },
+        }}
+      >
+        {article}
+      </Markdown>
     </article>
   );
 }

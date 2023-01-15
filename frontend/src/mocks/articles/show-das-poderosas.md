@@ -2,6 +2,27 @@
 
 ### _Anitta_
 
+<Code language="javascript">
+import React, { useState } from 'react';
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+  return (
+    &lt;div>
+      &lt;p>You clicked {count} times</p>
+      &lt;button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+export default Example;
+</Code>
+
+> **_Note_**
+>
+> You might be wondering why we’re using a counter here instead of a more realistic example. This is to help us focus on the API while we’re still making our first steps with Hooks.
+
 Prepara que agora é a hora  
 Do show das poderosas  
 Que descem e rebolam  
